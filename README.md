@@ -1,6 +1,6 @@
 # Dynatrace-Server-Ansible
 
-This Ansible role uninstalls Dynatrace components of the [Dynatrace Application Monitoring](http://www.dynatrace.com/en/products/application-monitoring.html) solution.
+This Ansible role uninstalls Dynatrace AppMon components of the [Dynatrace AppMon](https://www.dynatrace.com/support/doc/appmon/) solution.
 
 ## Download
 
@@ -11,7 +11,7 @@ The role is available via:
 
 ## Description
 
-This role uninstall Dynatrace components: Dynatrace Server, Collector, Client, Agent, WebServer Agent, OneAgent, Dynatrace User and remove Dynatrace directory. You can choose components to install by setting variable's in playbook or in `defaults/main.yml` file.,
+This role uninstall Dynatrace AppMon components: Dynatrace AppMon Server, Collector, Client, Agent, WebServer Agent, OneAgent, Dynatrace AppMon User and remove Dynatrace AppMon directory. You can choose components to install by setting variable's in playbook or in `defaults/main.yml` file.,
 
 ## Role Variables
 
@@ -19,17 +19,17 @@ As defined in ```defaults/main.yml```:
 
 | Name                                          | Default                                                               | Description
 |-----------------------------------------------|-----------------------------------------------------------------------|------------
-| *dynatrace_install_dir*          				| /opt                                                                  | The Dynatrace directory will be removed from *$dynatrace_install_dir*. 
+| *dynatrace_install_dir*          				| /opt                                                                  | The Dynatrace AppMon directory will be removed from *$dynatrace_install_dir*. 
 | *dynatrace_version*  							| 6.5                                     								| The version of the Dynatrace Component.
-| *dynatrace_user*   							| dynatrace | The system user that owns the Dynatrace installation, whom will be removed.
+| *dynatrace_user*   							| dynatrace | The system user that owns the Dynatrace AppMon installation, whom will be removed.
 | *dynatrace_server_collector_port*             | 6699                                                                  | The port where the server shall listen for Collectors. Use either ```6698``` (non-SSL) or ```6699``` (SSL).
 | *dynatrace_collector_agent_port*         		| 9998                                                                  | The port on the Collector the Web Server Agent shall connect to.
-| *ansible_uninstall_server*    				| yes                                                            		| Whether the Dynatrace server shall be uninstall, or not.
-| *ansible_uninstall_collector*        			| no                                                                 	| Whether the Dynatrace Collector shall be uninstall, or not.
-| *ansible_remove_dynatrace_user*       	 	| yes                                                        			| Whether the Dynatrace user shall be removed, or not.
-| *ansible_remove_dynatrace_diretory*    		| yes                                                            		| Whether the Dynatrace directory shall be removed, or not.
-| *ansible_uninstall_client*    				| dynatrace                                                             | Whether the Dynatrace Client shall be removed, or not.
-| *ansible_uninstall_agent*    					| dynatrace                                                             | Whether the Dynatrace Agent shall be uninstall, or not.
+| *ansible_uninstall_server*    				| yes                                                            		| Whether the Dynatrace AppMon server shall be uninstall, or not.
+| *ansible_uninstall_collector*        			| no                                                                 	| Whether the Dynatrace AppMon Collector shall be uninstall, or not.
+| *ansible_remove_dynatrace_user*       	 	| yes                                                        			| Whether the Dynatrace AppMon user shall be removed, or not.
+| *ansible_remove_dynatrace_diretory*    		| yes                                                            		| Whether the Dynatrace AppMon directory shall be removed, or not.
+| *ansible_uninstall_client*    				| dynatrace                                                             | Whether the Dynatrace AppMon Client shall be removed, or not.
+| *ansible_uninstall_agent*    					| dynatrace                                                             | Whether the Dynatrace AppMon Agent shall be uninstall, or not.
 | *ansible_uninstall_wsagent*                   | dynatrace                                                             | Whether the WebServer Agent shall be uninstall, or not.
 | *ansible_uninstall_oneagent*                  | dynatrace                                                             | Whether the Dynatrace OneAgent shall be uninstall, or not.
 | *dynatrace_server_role_name*                  | Dynatrace.Dynatrace-Uninstall-Ansible                                 | The actual name of this role in an [Ansible Playbook's](http://docs.ansible.com/playbooks.html) ```roles``` directory.
@@ -80,7 +80,7 @@ By default, we run our tests inside [Docker](https://www.docker.com/) containers
 
 ### Presentations
 
-- [Automated Deployments (of Dynatrace) with Ansible](http://www.slideshare.net/MartinEtmajer/automated-deployments-with-ansible)
+- [Automated Deployments (of Dynatrace AppMon) with Ansible](http://www.slideshare.net/MartinEtmajer/automated-deployments-with-ansible)
 - [Test-Driven Infrastructure with Ansible, Test Kitchen, Serverspec and RSpec](http://www.slideshare.net/MartinEtmajer/testing-ansible-roles-with-test-kitchen-serverspec-and-rspec-48185017)
 
 ## Problems? Questions? Suggestions?
